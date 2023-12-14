@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>Scientific Calculator</title>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Scientific Calculator</h1>
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <!-- Add scientific calculator buttons here -->
+      <button onclick="appendToDisplay('sin(')">sin</button>
+      <button onclick="appendToDisplay('cos(')">cos</button>
+      <button onclick="appendToDisplay('tan(')">tan</button>
+      <button onclick="appendToDisplay('sqrt(')">√</button>
+      <!-- Add more scientific functions as needed -->
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="calculateResult()">=</button>
+    </div>
+  </div>
+  <script src="/scripts/calculator.js"></script>
+</body>
+</html>

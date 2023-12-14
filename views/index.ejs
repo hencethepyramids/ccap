@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>Basic Calculator</title>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Basic Calculator</h1>
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <!-- Add more buttons for other digits and operations -->
+      <button onclick="appendToDisplay('+')">+</button>
+      <button onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('*')">*</button>
+      <button onclick="appendToDisplay('/')">/</button>
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="calculateResult()">=</button>
+    </div>
+  </div>
+
+  <script>
+    function appendToDisplay(value) {
+      document.getElementById('display').innerText += value;
+    }
+
+    function clearDisplay() {
+      document.getElementById('display').innerText = '0';
+    }
+
+    function calculateResult() {
+      try {
+        const result = eval(document.getElementById('display').innerText);
+        document.getElementById('display').innerText = result;
+      } catch (error) {
+        document.getElementById('display').innerText = 'Error';
+      }
+    }
+  </script>
+</body>
+</html>
